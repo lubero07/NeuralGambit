@@ -1,8 +1,8 @@
 # Write your code here
-n = int(input("Enter the size of the list: "))
+n = int(input())
 nums = []
 for i in range(n):
-    x = int(input("Enter element: "))
+    x = int(input())
     nums.append(x)
 
 score1 = 0
@@ -28,8 +28,8 @@ while len(nums) > 0:
         turn = 1  
 
 if score1 > score2:
-    print("Player 1 wins!")
+    print("Player 1")
 elif score2 > score1:
-    print("Player 2 wins!")
+    print("Player 2")
 else:
-    print("It's a tie!")
+    print("tie")
