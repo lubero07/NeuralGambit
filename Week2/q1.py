@@ -79,15 +79,15 @@ class History:
         lines=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
         for line in lines:
             a,b,c=line
-            if self.board[a] != '0' and self.board[a] = self.board[b] = self.board[c] :
+            if self.board[a] != '0' and self.board[a] == self.board[b] == self.board[c] :
                 return True
-            return False
+        return False
         
 
     def is_draw(self):
         # check if the board position is a draw
         # Feel free to implement this in anyway if needed
-        if not self.is_win() and '0' not in self.board
+        if not self.is_win() and '0' not in self.board:
             return True
         return False
 
@@ -103,7 +103,7 @@ class History:
     def is_terminal_history(self):
         # check if the history is a terminal history
         # Feel free to implement this in anyway if needed
-        if self.is_win or self.is_draw
+        if self.is_win() or self.is_draw():
             return True
         return False
 
@@ -112,9 +112,9 @@ class History:
         if self.is_win():
             if self.player == 'o':
                 return 1
-            else
+            else:
                 return -1
-        else     #draw
+        else:     #draw
             return 0
 
     def update_history(self, action):
@@ -145,7 +145,7 @@ def backward_induction(history_obj):
     # "0" was the one of the best actions for the current player/history.
     
     # TODO implement
-    if history_obj.is_terminal_history:
+    if history_obj.is_terminal_history():
         return history_obj.get_utility_given_terminal_history()
     player = history_obj.player
     valid_actions = history_obj.get_valid_actions()
