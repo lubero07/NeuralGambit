@@ -67,13 +67,13 @@ void execute_puzzle_file(const string& relative_path) {
     for (const auto& individual_move : winning_move_sequence) {
         string uci_format = uci::moveToUci(individual_move);
         
-        if (display_board.side_to_move() == Color::WHITE) {
+        if (display_board.sideToMove() == Color::WHITE) {
             cout << "  Step " << step_counter << " (White): " << uci_format;
         } else {
             cout << " | (Black Forced Response): " << uci_format << endl;
             step_counter++;
         }
-        display_board.make_move(individual_move);
+        display_board.makeMove(individual_move);
     }
     cout << "\n===========================================\n\n";
 }
