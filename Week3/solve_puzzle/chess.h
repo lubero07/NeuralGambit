@@ -37,8 +37,8 @@ public:
         }
 
         // We use a universal auto collection loop here to bypass MvList vs MoveList version issues entirely
-        auto moves = MvList();
-        movegen::legalmoves(moves, board);
+       vector<Move> moves;
+       movegen::legalmoves<vector<Move>>(moves, board);
 
         if (board.sideToMove() == Color::WHITE) {
             int max_value = -infinity;
