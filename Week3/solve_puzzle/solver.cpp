@@ -77,7 +77,7 @@ void execute_puzzle_file(const string& relative_path) {
 }
 
 int main() {
-    string puzzle_folder_path = "puzzles"; 
+    string puzzle_folder_path = "../"; 
 
     cout << "===========================================" << endl;
     cout << "   LAUNCHING MATE-IN-N PUZZLE SOLVER BOT   " << endl;
