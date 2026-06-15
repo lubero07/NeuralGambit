@@ -52,7 +52,7 @@ public:
             return eval();
         }
 
-        MoveList moves; 
+        Movelist moves; // Fixed naming mismatch (lowercase 'l')
         movegen::legalmoves(moves, board);
 
         // Maximizing Player Branch (White)
@@ -108,5 +108,4 @@ public:
     }
 };
 
-#endif // CHESS_H
 #endif // CHESS_H
